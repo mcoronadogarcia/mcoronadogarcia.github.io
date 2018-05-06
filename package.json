@@ -1,8 +1,8 @@
 {
-    "title": "Bare",
-    "name": "startbootstrap-bare",
-    "version": "4.0.0",
-    "description": "A basic HTML starter template for Bootstrap",
+    "title": "Portfolio Item",
+    "name": "startbootstrap-portfolio-item",
+    "version": "4.1.1",
+    "description": "A portfolio item HTML template built with Bootstrap",
     "keywords": [
         "css",
         "sass",
@@ -11,9 +11,9 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/bare",
+    "homepage": "https://startbootstrap.com/template-overviews/portfolio-item",
     "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-bare/issues",
+        "url": "https://github.com/BlackrockDigital/startbootstrap-portfolio-item/issues",
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
@@ -23,14 +23,14 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-bare.git"
+        "url": "https://github.com/BlackrockDigital/startbootstrap-portfolio-item.git"
     },
     "dependencies": {
-        "bootstrap": "4.0.0",
+        "bootstrap": "4.1.1",
         "jquery": "3.3.1"
     },
     "devDependencies": {
-        "browser-sync": "2.23.6",
+        "browser-sync": "2.24.3",
         "gulp": "^3.9.1"
     }
 }
