@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Mayra Coronado Garcia's Portfolio</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/1-col-portfolio.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+  <!-- Leaflet -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"> -->
+  <link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css" />
+  <script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
+
+  <!-- D3.js -->
+  <link rel="stylesheet" href="css/d3.parcoords.css">
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="js/d3.parcoords.js"></script>
+  <script src="js/colorbrewer.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">Mayra's Portfolio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../shortbio.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../files/Resume.pdf">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:mayra-coronadogarcia@uiowa.edu">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div style="height:0px;" id="info-label" class="col-md-6 portfolio-item"></div>
+  <!-- Page Content -->
+
+  <div class="container">
+
+  <!-- Page Header -->
+
+  <div class="panel panel-default">
+  <div class="panel-body">
+  	<div class="row panel-header">
+  		<div class="col-lg-12">
+  			<h1 class="page-header">Parallel Coordinates for Colorado County Education Level between 1970 to 2016.</h1>
+  		</div>
+  	</div>
+  	<div class="row">
+  	  <div class="col-lg-9">
+  		<p>The map you're looking at displays the percent of education attainment in Colorado counties.
+        This information is displayed in a multivariate manner.
+        The map was inspired by the somehwat-common
+        <a href="http://cdn.static-economist.com/sites/default/files/20110514_WOC726.gif">
+          population prymaids
+        </a>
+        from various sources online.
+        Unfortunately while the prymaid allows you a finer grained
+        analysis, the form doesn't lend itself to integrating more than
+        one country at a time. The parallel coordinates and map
+        combination neatly follows Scheiderman's mantra.</p>
+      <ul>
+        <li>P.C. enables you (the user) an <b>overview</b> of <i>all</i> the data.
+          About 64 colorado counties are depicted, instead of the P.P.'s 1.
+        </li>
+        <li>There are three primary points of interaction; brushing P.C. axes,
+          the dropdown attribute selection, and the map hovering.
+          Each of them aid in assisting the user to get the data they
+          <i>need</i> by <b>zooming and filtering</b> the data.</li>
+        <li>The map tooltip interaction allows precise information,
+          thus serving as a proxy for <b>details on demand</b>.</li>
+      </ul>
+      <p><b>Variable Description:</b> All variables are describing the
+        percent of adults in a county with a specific education
+        attainment.<p>
+        <ul>
+          <li><b>LHS:</b> stands for less than a high school diploma.</li>
+          <li><b>HS:</b> stands for a high school diploma</li>
+          <li><b>SC:</b> stands for some college education</li>
+          <li><b>C:</b> stands for college education</li>
+          <li><b>1970</b> depicts the year 1970</li>
+          <li><b>1980</b> depicts the year 1980</li>
+          <li><b>1990</b> depicts the year 1990</li>
+          <li><b>2000</b> depicts the year 2000</li>
+          <li><b>1216</b> depicts the year 2012 to 2016</li>
+        </ul>
+  	  </div>
+  	  <div class="row">
+          <div class= "col-lg-3">
+  		        <div id="legend"> </div>
+              <br><br>
+              <div>
+                <p>In case GitHub Pages incorrectly displays the map, click below!</p>
+                <form method="get" action="data/lab7-larson.zip">
+                  <button type="submit">Download .zip</button>
+                </form>
+              </div>
+  	        </div>
+  	   </div>
+  	  <!-- /.row -->
+
+  	  <!-- /.row -->
+  	  <!-- Projects Row -->
+  	  <div class="row">
+  		<div class="col-lg-12">
+  		  <div class="col-md-12 portfolio-item">
+  			<div id="map"/>
+  		  </div>
+  		</div>
+  	  </div>
+  	  <!-- /.row -->
+
+      <br style="margin-top:10px;">
+
+  	  <!-- Projects Row -->
+  	  <div class="row">
+  		<div class="col-lg-12 portfolio-item">
+  		  <div class="col-md-12 portfolio-item">
+  			<div id="pcp" class="parcoords"/>
+  		  </div>
+  		</div>
+  	  </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <p><b>Changes:</b> Mouseover now highlights the parallel coordinate plot! Some minor formatting tweaks otherwise.</p>
+        </div>
+      </div>
+
+  </div>
+  </div>
+  </div> <!-- /.container -->
+
+  <hr>
+  <br>
+
+
+  <!-- Footer -->
+<footer class="py-3 bg-dark fixed-bottom">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copywrite @ Mayra Coronado Garcia's Portfolio</p>
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!-- jQuery -->
+<script src="../vendor/jquery/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!--link to main JavaScript file-->
+<script src="js/main2.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
