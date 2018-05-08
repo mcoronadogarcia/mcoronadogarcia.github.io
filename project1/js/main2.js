@@ -1,9 +1,9 @@
 //TODO: change the colors
-var initialColors = colorbrewer.Blues[5];
+var initialColors = colorbrewer.Reds[5];
 
 //TODO: change the name and id field of your data. These will be used to link the pcp with the map, and also display labels
-var key = "FULL";
-var idfield = "US_FIPS";
+var key = "NAME";
+var idfield = "StatePS";
 
 //TODO: change the name of the attributes to include in the parallel coordinate plot
 var attNames = ["LHS_1970", "HS_1970", "SC_1970", "C_1970",
@@ -36,71 +36,11 @@ var svg = d3.select(map.getPanes().overlayPane).append("svg"),
 g = svg.append("g").attr("class", "leaflet-zoom-hide");
 
 //d3.json("data/iowa_counties.json", function(error, jsonData) {
-d3.json("HWdata/colorado_ed.json", function(error, jsonData) {
-  console.log(jsonData);
+//d3.json("../data/colorado_ed.json", function(error, jsonData) {
+  //console.log(jsonData);
   if (error) throw error;
   //create an attribute array (pcpdata)
   jsonData.features.forEach(function(d){
-    //console.log(d);
-    d.properties.LHS_1970 = d.properties.colorado_3;
-    delete d.properties.colorado_3;
-
-    d.properties.HS_1970 = d.properties.colorado_4;
-    delete d.properties.colorado_4;
-
-    d.properties.SC_1970 = d.properties.colorado_5;
-    delete d.properties.colorado_5;
-
-    d.properties.C_1970 = d.properties.colorado_6;
-    delete d.properties.colorado_6;
-
-    d.properties.LHS_1980 = d.properties.colorado_7;
-    delete d.properties.colorado_7;
-
-    d.properties.HS_1980 = d.properties.colorado_8;
-    delete d.properties.colorado_8;
-
-    d.properties.SC_1980 = d.properties.colorado_9;
-    delete d.properties.colorado_9;
-
-    d.properties.C_1980 = d.properties.colorado10;
-    delete d.properties.colorado10;
-
-    d.properties.LHS_1990 = d.properties.colorado11;
-    delete d.properties.colorado11;
-
-    d.properties.HS_1990 = d.properties.colorado12;
-    delete d.properties.colorado12;
-
-    d.properties.SC_1990 = d.properties.colorado13;
-    delete d.properties.colorado13;
-
-    d.properties.C_1990 = d.properties.colorado14;
-    delete d.properties.colorado14;
-
-    d.properties.LHS_2000 = d.properties.colorado15;
-    delete d.properties.colorado15;
-
-    d.properties.HS_2000 = d.properties.colorado16;
-    delete d.properties.colorado16;
-
-    d.properties.SC_2000 = d.properties.colorado17;
-    delete d.properties.colorado17;
-
-    d.properties.C_2000 = d.properties.colorado18;
-    delete d.properties.colorado18;
-
-    d.properties.LHS_1216 = d.properties.colorado19;
-    delete d.properties.colorado19;
-
-    d.properties.HS_1216 = d.properties.colorado20;
-    delete d.properties.colorado20;
-
-    d.properties.SC_1216 = d.properties.colorado21;
-    delete d.properties.colorado21;
-
-    d.properties.C_1216 = d.properties.colorado22;
-    delete d.properties.colorado22;
 
     d.id = +d.properties[idfield];
     d.properties[idfield] = +d.properties[idfield];

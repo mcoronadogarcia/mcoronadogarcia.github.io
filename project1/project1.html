@@ -9,13 +9,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Mayra Coronado Garcia's Portfolio</title>
+  <title>Mayra Final Project</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="../css/1-col-portfolio.css" rel="stylesheet">
+  <link href="../css/portfolio-item.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css" />
   <!-- Leaflet -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
@@ -36,7 +36,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="../index.html">Mayra's Portfolio</a>
+      <a class="navbar-brand" href="../index.html">GEOG:3540: Final Project</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -47,10 +47,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../shortbio.html">About</a>
+            <a class="nav-link" href="../shortbio.html">About Mayra</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../files/Resume.pdf">Resume</a>
+            <a class="nav-link" href="../files/ProjectProposal_webpage.html">Project Proposal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../files/resume_webpage.html">Resume</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="mailto:mayra-coronadogarcia@uiowa.edu">Contact</a>
@@ -71,47 +74,41 @@
   <div class="panel-body">
   	<div class="row panel-header">
   		<div class="col-lg-12">
-  			<h1 class="page-header">Parallel Coordinates for Colorado County Education Level between 1970 to 2016.</h1>
+  			<h1 class="page-header">Choropleth Map and Scatterplot of
+          Opioid Overdoses in US between 1999-2014</h1>
   		</div>
   	</div>
   	<div class="row">
   	  <div class="col-lg-9">
-  		<p>The map you're looking at displays the percent of education attainment in Colorado counties.
-        This information is displayed in a multivariate manner.
-        The map was inspired by the somehwat-common
+  		<p>The maps you're looking at displays the crude death rate per 1000 deaths of
+        Opioid Overdoses in the United States between 1999 and 2014. For example,
+        in 1999 the crude death rate for Opioid Overdoses in Alaska was 108.
+        This means that of 1000 deaths, 108 of them were due to Opioid Overdoeses.
+        The choropleth displays information for the year selected. The scatterplot
+        is showing that the there has been an increase in opioid overdoses overall
+        as time continues. Although there is an overall increase,
+        an intersting thing to note about this data iscfrom the scatter plot, is that
+        there are some states who have stayed relatively the same, some who increased,
+        and some who decreased opioid overdoses. The map was inspired by the somehwat-common
         <a href="http://cdn.static-economist.com/sites/default/files/20110514_WOC726.gif">
           population prymaids
         </a>
         from various sources online.
         Unfortunately while the prymaid allows you a finer grained
         analysis, the form doesn't lend itself to integrating more than
-        one country at a time. The parallel coordinates and map
-        combination neatly follows Scheiderman's mantra.</p>
+        one country at a time. </p>
       <ul>
-        <li>P.C. enables you (the user) an <b>overview</b> of <i>all</i> the data.
-          About 64 colorado counties are depicted, instead of the P.P.'s 1.
-        </li>
-        <li>There are three primary points of interaction; brushing P.C. axes,
+        <li>There are three primary points of interaction; brushing scatterplot axes,
           the dropdown attribute selection, and the map hovering.
           Each of them aid in assisting the user to get the data they
           <i>need</i> by <b>zooming and filtering</b> the data.</li>
         <li>The map tooltip interaction allows precise information,
           thus serving as a proxy for <b>details on demand</b>.</li>
       </ul>
-      <p><b>Variable Description:</b> All variables are describing the
-        percent of adults in a county with a specific education
-        attainment.<p>
-        <ul>
-          <li><b>LHS:</b> stands for less than a high school diploma.</li>
-          <li><b>HS:</b> stands for a high school diploma</li>
-          <li><b>SC:</b> stands for some college education</li>
-          <li><b>C:</b> stands for college education</li>
-          <li><b>1970</b> depicts the year 1970</li>
-          <li><b>1980</b> depicts the year 1980</li>
-          <li><b>1990</b> depicts the year 1990</li>
-          <li><b>2000</b> depicts the year 2000</li>
-          <li><b>1216</b> depicts the year 2012 to 2016</li>
-        </ul>
+      <p><b>Future Modifications</b> All the features for each region
+        is being displayed in the scatterplot including
+        variables that are not relevant. Furture work includes only
+        displaying the years on this plot.<p>
   	  </div>
   	  <div class="row">
           <div class= "col-lg-3">
@@ -151,13 +148,16 @@
 
       <div class="row">
         <div class="col-xs-12">
-          <p><b>Changes:</b> Mouseover now highlights the parallel coordinate plot! Some minor formatting tweaks otherwise.</p>
+          <p><b>Changes:</b> Mouseover now highlights the state and the corresponding
+            line that connects crude death rate of Opioid Overdoses from 1999 to 2014!
+            Some minor formatting tweaks otherwise.</p>
         </div>
       </div>
 
   </div>
   </div>
-  </div> <!-- /.container -->
+  </div>
+</div> <!-- /.container -->
 
   <hr>
   <br>
@@ -177,7 +177,7 @@
 <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
 <!--link to main JavaScript file-->
-<script src="js/main2.js"></script>
+<script src="js/main3.js"></script>
 
 <!-- Bootstrap core JavaScript -->
 <script src="../vendor/jquery/jquery.min.js"></script>
